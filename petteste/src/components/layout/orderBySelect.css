@@ -1,0 +1,13 @@
+.orderBy{
+	height: 30px;
+	width: 100px;
+
+	margin-left: 80%;
+	margin-bottom: 2px;
+}
+
+
+.orderOption{
+	height: 20px;
+	font-size: 80%;
+}

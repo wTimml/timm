@@ -1,0 +1,11 @@
+.perfil-capa {
+	background-image: linear-gradient(to top, #fce4ec 50%, white 38%);
+	height:220px
+}
+.perfil-foto {
+	border	: solid 8px #fce4ec;
+	margin-top: -70px
+}
+.perfil-nome {
+	margin-top: -50px
+}
