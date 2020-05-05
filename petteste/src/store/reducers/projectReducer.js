@@ -4,6 +4,7 @@ const initState= {
 		{id:'2',title: 'Title test1', content: 'teste content teste content teste content'},
 		{id:'3',title: 'Title test2', content: 'teste content teste content teste content'},
 		]
+
 }
 
 const projectReducer = (state = initState, action) =>{

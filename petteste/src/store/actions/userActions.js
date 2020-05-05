@@ -5,8 +5,13 @@ export const createUser = (users) => {
 		firestore.collection('users').add({
 			...users,
 			createdAt: new Date()
-		})
-		dispatch({type: 'CREATE_USER', users});
+		}).then(() => {
+			dispatch({ type: 'CREATE_USER', users });
+		}).catch((err) => {
+			dispatch({ type: 'CREATE_PROJECT_ERROR', err});
+		}
+			)
+		
 	}
 
 }
