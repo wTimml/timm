@@ -5,32 +5,34 @@ import PetsList from '../project/petsList'
 import {Pets} from '../project/pets'
 import OrderBySelect from "../layout/orderBySelect.js"
 import Pagination from '../layout/pagination'
-import PetPage from '../dashboard/petPage'
+
 
 class searchPage extends Component {
+
+	
 
 	render(){
 		return(
 
-			<section className="white">
-				
-			 	<div className="container">
-			 		<SearchButton className=""/>
-			 	</div>
+			<div className="white">
 
 			 	<div className="row">
 			 		<div className="col s12">
 			 			<OrderBySelect/>
 			 		</div>
-				 	<div className="col s12 m2">
-				 		<SearchSideScroll/>
+					<div className="col s12 m2">
+						
+						<SearchSideScroll /> 
+						
 				 	</div>
-				 	<div className="col s12 m8">
+					<div className="col s12 m8" >
 
 						<PetsList pets={Pets}/>
+						
+
 						<div className="row">
 				 		</div>
-						<hr class="divider" tabindex="-1"></hr>
+						<hr className="divider" tabIndex="-1"></hr>
 						<Pagination />
 				 	</div>
 				 	<div className="col s12 m2">
@@ -38,7 +40,7 @@ class searchPage extends Component {
 				 	</div>
 			 	</div>
 
-			 </section>
+			 </div>
 			)
 		}
 }

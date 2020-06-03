@@ -1,11 +1,9 @@
 .flip-card{
-	width: 200px;
+	width: 150px;
   	height: 200px;
-  	border: 1px solid #f1f1f1;
   	perspective: 1000px;
   	background-color: transparent;
 }
-
 .flip-card-inner {
   position: relative;
   width: 100%;
@@ -17,18 +15,15 @@
 }
 
 .flip-card-back {
-	position: fixed;
-  	background-color: black;
-  	color: #fff;
-  	visibility: visible;
-  	opacity: 0;
-  	transition: opacity .2s, visibility .2s;
-
-
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
+    position: fixed;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: #fff;
+    visibility: visible;
+    opacity: 0;
+    transition: opacity .2s, visibility .2s;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .flip-card:hover .flip-card-back {
@@ -37,4 +32,5 @@
 }
 .flip-card-front img{
 	border-radius: 10%;
+    
 }

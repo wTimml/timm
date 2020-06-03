@@ -1,12 +1,14 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom'
-          
-  const SignOutLinks = () => {
 
+
+const SignOutLinks = () => {
     return(
-          <ul id="nav-mobile" class="right">
-            <li><NavLink to='/signin'>Entrar</NavLink></li>
-            <li><NavLink to='/signup'>Registrar</NavLink></li>
+        <ul id="nav-mobile" className="right">
+
+            <li><a className='sidenav-trigger show-on-large' data-target='slide-out' >Entrar</a></li>
+
+            <li><a className='sidenav-trigger show-on-large' data-target='slide-out2'>Registrar</a></li>
           </ul>
         
           )

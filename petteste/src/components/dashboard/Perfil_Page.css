@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+.rowz {
+	display: -ms-flexbox;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin-right: -15px;
+	margin-left: -15px;
+}
+
+.Container {
+	max-width: 1250px;
+	margin: 30px auto 30px;
+	padding: 0 !important;
+	width: 90%;
+	background-color: #fff;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.10), 0 3px 6px rgba(0,0,0,0.10);
+}
+
+.header {
+	background: #eee;
+	background-image: url("https://image.noelshack.com/fichiers/2017/38/2/1505775648-annapurnafocus.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-color: orange;
+	height: 250px;
+}
+
+	.header i {
+		position: relative;
+		cursor: pointer;
+		right: -96%;
+		top: 25px;
+		font-size: 18px !important;
+		color: #fff;
+	}
+
+@media (max-width:800px) {
+	div .header {
+		height: 150px;
+	}
+
+		div .header i {
+			right: -90%;
+		}
+}
+
+.perfilMain {
+	padding: 20px 20px 0px 20px;
+}
+
+.perfilLeft {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.photo {
+	width: 200px;
+	height: 200px;
+	margin-top: -120px;
+	border-radius: 100px;
+	border: 4px solid #fff;
+}
+
+.perfilActive {
+	width: 20px;
+	height: 20px;
+	border-radius: 20px;
+	position: absolute;
+	right: calc(50% - 70px);
+	top: 75px;
+	background-color: #FFC107;
+	border: 3px solid #fff;
+}
+
+@media (max-width:990px) {
+	.perfilActive{
+		right: calc(50% - 60px);
+		top: 50px;
+	}
+}
+
+.perfilName {
+	margin-top: 20px;
+	font-family: "Open Sans";
+	font-weight: 600;
+	font-size: 18pt;
+	color: orangered;
+}
+.perfilSubName {
+	margin-top: 25px;
+	font-family: "Open Sans";
+	font-weight: 600;
+	font-size: 18pt;
+	color: orange;
+}
+
+.info {
+	margin-top: -5px;
+	margin-bottom: 5px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 11pt;
+	color: orange;
+}
+
+.stats {
+	margin-top: 25px;
+	text-align: center;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #ededed;
+	font-family: 'Montserrat', sans-serif;
+}
+
+
+.number-stat {
+	padding: 0px;
+	font-size: 14pt;
+	font-weight: bold;
+	font-family: 'Montserrat', sans-serif;
+	color: orange;
+	padding-right: 20px;
+}
+
+.desc-stat {
+	margin-top: -15px;
+	font-size: 10pt;
+	color: orange;
+	padding-right: 20px;
+}
+
+.desc {
+	text-align: center;
+	margin-top: 25px;
+	margin: 25px 40px;
+	color: #999;
+	font-size: 11pt;
+	font-family: "Open Sans";
+	padding-bottom: 25px;
+	border-bottom: 1px solid #ededed;
+}
+
+.social {
+	margin: 5px 0 12px 0;
+	text-align: center;
+	display: inline-block;
+	font-size: 20pt;
+}
+
+	.social i {
+		cursor: pointer;
+		margin: 0 15px;
+	}
+
+		.social i:nth-child(1) {
+			color: #4267b2;
+		}
+
+		.social i:nth-child(2) {
+			color: #1da1f2;
+		}
+
+		.social i:nth-child(3) {
+			color: #bd081c;
+		}
+
+		.social i:nth-child(4) {
+			color: #36465d;
+		}
+
+.perfilRight {
+	padding: 0 25px 0 25px !important;
+}
+
+.navPerfil {
+	display: inline-flex;
+}
+
+	.navPerfil li {
+		margin: 40px 30px 0 10px;
+		cursor: pointer;
+		font-size: 13pt;
+		text-transform: uppercase;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 500;
+		color: orange;
+	}
+
+		.navPerfil li:hover, .navPerfil li:nth-child(1) {
+			color: darkorange;
+			border-bottom: 2px solid darkorange;
+		}
+
+.follow {
+	position: absolute;
+	right: 8%;
+	top: 35px;
+	font-size: 11pt;
+	background-color: #42b1fa;
+	color: #fff;
+	padding: 8px 15px;
+	cursor: pointer;
+	transition: all .4s;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+}
+
+	.follow:hover {
+		box-shadow: 0 0 15px rgba(0,0,0,0.2), 0 0 15px rgba(0,0,0,0.2);
+	}
+
+@media (max-width:990px) {
+	.navPerfil {
+		display: none;
+	}
+
+	.follow {
+		width: 50%;
+		margin-left: 25%;
+		display: block;
+		position: unset;
+		text-align: center;
+	}
+}
+
+.perfilGallery {
+	margin-top: 35px;
+}
+
+	.perfilGallery div {
+		margin-bottom: 30px;
+	}
+
+	.perfilGallery img {
+		box-shadow: 0 3px 6px rgba(0,0,0,0.10), 0 3px 6px rgba(0,0,0,0.10);
+		width: 150px;
+		height: auto;
+		cursor: pointer;
+		max-width: 100%;
+	}

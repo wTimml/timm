@@ -4,7 +4,9 @@
 }
 .perfil-foto {
 	border	: solid 8px #fce4ec;
-	margin-top: -70px
+	margin-top: -70px;
+	width: 40%;
+	height:auto;
 }
 .perfil-nome {
 	margin-top: -50px

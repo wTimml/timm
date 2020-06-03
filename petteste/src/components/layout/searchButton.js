@@ -3,31 +3,15 @@ import "./searchButton.css"
 
 class searchButton extends Component{
 
-		constructor(){
-			super()
-			this.state = {
-				showMe: false
-			}
-		}
-		operation(){
-			switch(this.state.showMe){
-					case false:
-						this.setState({showMe:true})
-						break
-					case true:
-						this.setState({showMe:false})
-						break
-				}
-		}
 		
 
-		render(){
+	render() {
+
+		const { onFullSearch } = this.props
 		return(
 
 		<div className="searchTotal">
 
-			{
-				this.state.showMe?
 				<div className="searchArea">
 					<div className="container">
 						<div className="row">
@@ -67,19 +51,22 @@ class searchButton extends Component{
 								    <option value="3">Option 3</option>
 								  </select>
 							</div>
-						</div>
+									
+								</div>
+								<div className="searchButton">
+									<a className="btn-large orange darken-1" onClick={() => onFullSearch('true')} >Pesquisar</a>
+								</div>
 					</div>
 				</div>
-				:null
-			}
-			<div className="searchButton">
-				<a className="btn-large orange darken-1" onClick ={()=> this.operation()}>Pesquisa completa</a>
-			</div>
-			</div>
+				</div>
+						
+			
+			
 			)
-	
 
-}
+
+				}
+			
 }
 
 export default searchButton;

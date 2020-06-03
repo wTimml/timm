@@ -2,28 +2,27 @@ import React from 'react'
 import M from 'materialize-css'
 
 class modalCadPet extends React.Component {
-    render() {
+	render() {
 
-        document.addEventListener('DOMContentLoaded', function () {
-            var elems = document.querySelectorAll('.modal');
-            var instances = M.Modal.init(elems);
-        });
+		document.addEventListener('DOMContentLoaded', function () {
+			var elems = document.querySelectorAll('.modal');
+			var instances = M.Modal.init(elems);
+		});
 
-        return (
+		return (
 
-            <div>
+			<div>
 
-                <a class="waves-effect waves-light btn-floating btn-large modal-trigger orange" href="#modal1">
-                    <i class="material-icons">add</i>
-                </a>
+				<a class="waves-effect waves-light btn-floating btn-large modal-trigger orange" href="#modal1">
+					<i class="material-icons">add</i>
+				</a>
 
 
-                <div id="modal1" class="modal">
-                    <div class="modal-content">
+				<div id="modal1" class="modal">
+					<div class="modal-content">
 						<h4 className='center'>Cadastrar Pet</h4>
 
 						<form onSubmit={this.handleSubmit} className='white'>
-							<h5 className='grey-text text-darken-3'>Sign Up</h5>
 
 							<div className='input-field'>
 								<label htmlFor='USER_NAME'>First Name</label>
@@ -40,7 +39,7 @@ class modalCadPet extends React.Component {
 								<input type='email' id='USER_EMAIL' onChange={this.handleChange} />
 							</div>
 							<div className='input-field'>
-								<label htmlFor='USER_BIRTHDAY'>Email</label>
+								<label htmlFor='USER_BIRTHDAY'></label>
 								<input type='date' id='USER_BIRTHDAY' onChange={this.handleChange} />
 							</div>
 
@@ -50,18 +49,15 @@ class modalCadPet extends React.Component {
 							</div>
 
 							<div className='input-field'>
-								<button className='btn pink lighten-1 z-depth-1'>Sign Up</button>
+								<button className='btn pink lighten-1 z-depth-1'>Cadastrar	</button>
 							</div>
 
 						</form>
-</div>
-                    <div class="modal-footer">
-                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-                    </div>
-                </div>
-            </div>
-        )
-    }
+					</div>
+				</div>
+			</div>
+		)
+	}
 }
 
 export default modalCadPet

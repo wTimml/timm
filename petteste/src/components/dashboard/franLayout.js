@@ -11,8 +11,12 @@ class franLayout extends Component {
 
 		return(
 			 <section>
-			 			<SliderMain/>
-			 			<InLinePets/>
+				<SliderMain />
+
+				<div style={{ paddingTop: '3px' }}>
+					<h3 className="center">Disponiveis</h3>
+					<InLinePets />
+				</div>
 			 			<SliderMain/>
 			 </section>
 			)

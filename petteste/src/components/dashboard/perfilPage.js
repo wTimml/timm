@@ -1,19 +1,18 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PerfilCapa from '../layout/perfilCapa'
 import TabsPerfil from '../layout/tabsPerfil'
 
-class searchPage extends Component {
+const searchPage = ({name,doados,adotados,cadastrados }) => {
 
-	render(){
 		return (
 			<div className="">
 				<div className="">
-					<PerfilCapa />
+					<PerfilCapa name={name} doados={doados} adotados={adotados} cadastrados={cadastrados}/>
 					<TabsPerfil />
 				</div>
 			</div>
 	)
-		}
+		
 }
 
 export default searchPage;

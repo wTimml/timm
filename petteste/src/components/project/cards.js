@@ -1,21 +1,22 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './cards.css'
+import {  NavLink } from 'react-router-dom';
 
 const Cards = (props) => {
-	return(
+	return (
 
-	// <div className="row">
-		<div className="col s12 m3">
+		// <div className="row">
+		<div className="col s12 m3 testt">
 
-			<div class="flip-card">
+			<div className="flip-card">
 
-			  <div class="flip-card-inner">
+			  <div className="flip-card-inner">
 
-			    <div class="flip-card-front">
-						<img src={props.img} alt="" height="200" width="200"/>
+			    <div className="flip-card-front">
+						<NavLink to={'/petPage/' + props.id} ><img src={props.img} alt=""  height="150" width="150"/></NavLink>
 			    </div>
 
-			    <div class="flip-card-back">
+			    <div className="flip-card-back">
 			    	<div className="textCard">
 				      	<h5>{props.nomePet} </h5>
 				    </div>

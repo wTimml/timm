@@ -1,0 +1,8 @@
+ul.dropdown-content li a {
+	color: #CB90B3;
+}
+
+ul.dropdown-content li a:hover {
+	color: white;
+	background: #CB90B3
+}	

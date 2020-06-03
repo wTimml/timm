@@ -1,21 +1,22 @@
-import React, { Component } from 'react'
-import GaleriaPet from '../project/galeriaPet'
+import React from 'react'
+import GaleriaPet from '../project/galeriaPet.jsx'
 import InfosPet from '../project/infosPet'
 
 
-class petPage extends Component {
-	render() {
+function petPage () {
+	
 
 		return (
 			<section>
 				<div className="row">
-					<GaleriaPet/>
+
+					<GaleriaPet />
 					<InfosPet/>
 					
 				</div>
 			</section>
 		)
-	}
+	
 }
 
 

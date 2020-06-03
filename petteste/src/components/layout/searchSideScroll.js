@@ -9,9 +9,9 @@ const SearchSideScroll = () => {
 				<div className="leftScrollChips">
 					<div className="row">
 
-						<div class="chip">
+						<div className="chip">
 							Tag
-							<i class="close material-icons">close</i>
+							<i className="close material-icons">close</i>
 						</div>
 				
 					</div>
@@ -19,28 +19,28 @@ const SearchSideScroll = () => {
 
 				<div className="leftScrollSelect">
 					  <label>Animal</label>
-						  <select class="browser-default">
+					<select className="browser-default">
 						    <option value="" disabled selected>Choose your option</option>
 						    <option value="1">Option 1</option>
 						    <option value="2">Option 2</option>
 						    <option value="3">Option 3</option>
 						  </select>
 					 <label>Porte</label>
-						  <select class="browser-default">
+					<select className="browser-default">
 						    <option value="" disabled selected>Choose your option</option>
 						    <option value="1">Option 1</option>
 						    <option value="2">Option 2</option>
 						    <option value="3">Option 3</option>
 						  </select>
 					 <label>Idade</label>
-						  <select class="browser-default">
+					<select className="browser-default">
 						    <option value="" disabled selected>Choose your option</option>
 						    <option value="1">Option 1</option>
 						    <option value="2">Option 2</option>
 						    <option value="3">Option 3</option>
 						  </select>
 
-					<a className="btn orange darken-1" onclick =''>Pesquisa rápida</a>
+					<a className="btn orange darken-1" >Pesquisa rápida</a>
 				</div>
 
 			</div>
