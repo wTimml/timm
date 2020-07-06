@@ -55,7 +55,7 @@ import Cards from '../project/cards'
 
                     Pets.map((nomePet, i) => {
                         return (
-                            <i className="carousel-item" href={'#'+ Pets[i].id}>
+                            <i className="carousel-item" style={{ zIndex: '-999' }} href={'#'+ Pets[i].id}>
                                 <Cards
                                     key={Pets[i].id}
                                     id={Pets[i].id}

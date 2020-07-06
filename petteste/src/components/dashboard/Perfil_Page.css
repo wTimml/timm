@@ -24,19 +24,20 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	background-color: orange;
 	height: 250px;
 }
 
-	.header i {
+	
+	.header a{
+		color:transparent;
 		position: relative;
-		cursor: pointer;
 		right: -96%;
 		top: 25px;
-		font-size: 18px !important;
-		color: #fff;
 	}
 
+.perfilAddPetButton{
+	padding-right:10%; 
+}
 @media (max-width:800px) {
 	div .header {
 		height: 150px;

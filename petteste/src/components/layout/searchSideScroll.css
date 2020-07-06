@@ -19,6 +19,17 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #CB90B3;
 }
+@media  (max-width:1165px) {
+    .leftScroll {
+
+        max-width:350px;
+        min-width:200px;
+        display:block
+    }
+}
+.leftScroll{
+    min-width:200px
+}
 .leftScrollChips {
 
   overflow-y: auto;

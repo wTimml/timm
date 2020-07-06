@@ -1,0 +1,9 @@
+@media  (min-width:1165px) {
+    .cardSize {
+        min-width:150px
+    }
+    .searchPage{
+        display:block;
+        justify-content:center
+    }
+}

@@ -1,105 +1,113 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import { createUser} from '../../store/actions/userActions'
-import { Link, NavLink } from 'react-router-dom';
+import React, { useState } from 'react'
+//import { useLocation, useHistory } from 'react-router'
 
-class SignUp extends Component {
 
-	constructor(props) {
-		super(props)
-		this.state = {
-			USER_ID: '',
-			USER_BIRTHDAY: '',
-			USER_EMAIL: '',
-			USER_PASSWORD: '',
-			USER_NAME: '',
-		}
+function SignUp({ props }) {
+
+	const [form, setValues] = useState({
+		USER_ID: '',
+		USER_BIRTHDAY: '',
+		USER_EMAIL: '',
+		USER_PASSWORD: '',
+		USER_NAME: '',
+	})
+
+
+
+	const handleChange = (e) => {
+		setValues({
+			...form,
+			[e.target.id]: e.target.value
+		})
+		console.log(form)
+	}
+//	const history = useHistory()
+
+	const handleSubmit = (e) => {
+
+
+		e.preventDefault();
+		fetch('http://localhost:3001/register', {
+			method: 'post',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify({
+				USER_EMAIL: form.USER_EMAIL,
+				USER_PASSWORD: form.USER_PASSWORD,
+				USER_NAME: form.USER_NAME,
+				USER_BIRTHDAY: form.USER_BIRTHDAY
+			})
+		})
+			.then(response => response.json())
+			.then(user => {
+				if (user) {
+					//	this.props.loadUser(user)
+					//	this.props.onSignInChange(true)
+				}
+			})
+			.catch(err => console.log(err))
 	}
 
-	handleChange = (e) => {
-	this.setState({
-		[e.target.id]: e.target.value
-	})
-}
 
-handleSubmit =(e) => {
-	e.preventDefault();
-	console.log(this.state)
 
-	fetch('http://localhost:3001/register', {
-		method: 'post',
-		headers: { 'Content-Type': 'application/json' },
-		body: JSON.stringify({
-			email: this.state.USER_EMAIL,
-			password: this.state.USER_PASSWORD,
-			name: this.state.USER_NAME,
-			birthday: this.state.USER_BIRTHDAY
-		})
-	})
-		.then(response => response.json())
-		.then(user => {
-			if (user) {
-				this.props.loadUser(user)
-			}
-		})
-		.catch(err => console.log(err))
-	}
+	return (
 
-	render() {
-		
-		return (
-				<div className='' >
-				<ul id="slide-out2" className="sidenav" style={{ background: '#FDE4F2' }}>
-					<li><div className="user-view">
-						<h5 className="center show-on-large">Cadastrar</h5>
-					</div>
+		<div className=''  >
+			<ul id="slide-out2" className="sidenav" style={{ background: '#FDE4F2' }}>
+				<li><div className="user-view" style={{ paddingTop: '60px' }}>
+					<h5 className="center show-on-large">Cadastrar</h5>
+				</div>
+				</li>
+
+
+
+				<div className='container'  >
+						
+						<li>
+							<div className='input-field '>
+								<label htmlFor='USER_NAME'>Nome</label>
+								<input type='text' id='USER_NAME' onChange={handleChange} />
+							</div>
+						</li>
+						<li>
+							<div className='input-field'>
+								<label htmlFor='USER_EMAIL'>Email</label>
+								<input type='email' id='USER_EMAIL' onChange={handleChange} />
+							</div>
+						</li>
+						<li>
+							<div className='input-field'>
+								<label htmlFor='USER_BIRTHDAY'></label>
+								<input type='date' id='USER_BIRTHDAY' onChange={handleChange} />
+							</div>
+						</li>
+						<li>
+							<div className='input-field'>
+								<label htmlFor='USER_PASSWORD'>Password</label>
+								<input type='password' id='USER_PASSWORD' onChange={handleChange} />
+							</div>
 					</li>
+					<li>
+						<div className="">
+							<label style={{fontSize:'15px'}}for="avatar">Foto de Perfil</label>
 
-					<div className='container'>
-						<form onSubmit={this.handleSubmit} className=''>
-							
-							<li>
-								<div className="">
-									<b>IMG</b>
-								</div>
-							</li>
-							<li>
-								<div className='input-field '>
-									<label htmlFor='USER_NAME'>Nome</label>
-									<input type='text' id='USER_NAME' onChange={this.handleChange} />
-								</div>
-							</li>
-							<li>
-								<div className='input-field'>
-									<label htmlFor='USER_EMAIL'>Email</label>
-									<input type ='email' id='USER_EMAIL' onChange={this.handleChange}/>
-								</div>
-							</li>
-							<li>
-								<div className='input-field'>
-									<label htmlFor='USER_BIRTHDAY'></label>
-									<input type='date' id='USER_BIRTHDAY' onChange={this.handleChange} />
-								</div>
-							</li>
-							<li>
-								<div className='input-field'>
-									<label htmlFor='USER_PASSWORD'>Password</label>
-									<input type ='password' id='USER_PASSWORD' onChange={this.handleChange}/>
-								</div>
-							</li>
-							<li>
-								<div className='input-field' style={{ float: 'right' }}>
-									<button className='btn pink lighten-1 z-depth-1' onClick={this.handleSubmit} ><NavLink style={{color:'white'}} to="/signin">Sign Up</NavLink></button>
-								</div>
-							</li>
+							<input type="file"
+								id="avatar" name="avatar"
+								accept="image/png, image/jpeg">
+							</input>
+						</div>
+					</li>
+						<li>
+							<div className='input-field' style={{ float: 'right' }}>
+								<button className='btn pink lighten-1 z-depth-1 sidenav-close' onClick={handleSubmit} >Registrar</button>
+							</div>
+						</li>
 
-						</form>
-					</div>
-			
-				</ul>
-			</div>
-		)
-	}
+				</div>
+
+			</ul>
+		</div>
+	)
+
 }
 
-export default SignUp;
+export default SignUp

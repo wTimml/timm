@@ -1,5 +1,6 @@
 import React from 'react'
 import { withRouter } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router';
 
 class SigninForm extends React.Component {
 
@@ -21,8 +22,8 @@ class SigninForm extends React.Component {
     }
 
     onSubmitSignIn = () => {
-        const { history } = this.props
-
+        const history = useHistory()
+        const location = useLocation()
         fetch('http://localhost:3001/signin', {
             method: 'post',
             headers: { 'Content-Type': 'application/json' },
@@ -38,7 +39,7 @@ class SigninForm extends React.Component {
                     this.props.loadUser(user)
                     this.props.onSignInChange(true)
 
-                    history.push('/franLayout')
+                    history.push(location.pathname) //
                 }
             })
             .catch(err => console.log(err))
@@ -47,7 +48,7 @@ class SigninForm extends React.Component {
     render() {
         return (
 
-            <ul id="slide-out" className="sidenav" style={{ background:'#FDE4F2' }}>
+            <ul id="slide-out" className="sidenav" style={{ background:'#FDE4F2', paddingTop:'60px'}}>
                 <li><div className="user-view">
                     
                     

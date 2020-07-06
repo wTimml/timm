@@ -19,10 +19,12 @@ class modalAdote extends React.Component {
 				<div id="lastStep" className="modal">
 					<div className="modal-content">
 						<h4 className='center'>Infos finais de adocao</h4>
-						<p> informacoes do que e necessario para adotar( espaco na casa, comida, etc)</p>
+						<p> informacoes do que e necessario para adotar( espaco na casa, comida, visao de responsabilidade)</p>
 						
 					</div>
-
+					<div className="center">
+						<p> Ao apertar adotar voce sera redirecionado a um chat com o doador do pet</p>
+					</div>
 					<div className="modal-footer">
 						<a href="#!" className="modal-close waves-effect waves-orange btn-flat">Adotar!</a>
 					</div>

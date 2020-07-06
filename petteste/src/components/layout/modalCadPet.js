@@ -13,13 +13,13 @@ class modalCadPet extends React.Component {
 
 			<div>
 
-				<a class="waves-effect waves-light btn-floating btn-large modal-trigger orange" href="#modal1">
-					<i class="material-icons">add</i>
+				<a className="waves-effect waves-light btn-floating btn-large modal-trigger orange" href="#modal1">
+					<i className="material-icons">add</i>
 				</a>
 
 
-				<div id="modal1" class="modal">
-					<div class="modal-content">
+				<div id="modal1" className="modal">
+					<div className="modal-content">
 						<h4 className='center'>Cadastrar Pet</h4>
 
 						<form onSubmit={this.handleSubmit} className='white'>

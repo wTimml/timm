@@ -25,12 +25,12 @@ export default class Sidebar extends React.Component  {
 
 
         return (
-            <div>
+            <div >
 
                 <Navbar isSignedIn={this.props.isSignedIn} name={this.props.name} onSignInChange={this.props.onSignInChange}/>
 
                 <SigninForm loadUser={this.props.loadUser} onSignInChange={this.props.onSignInChange}/>
-                 <SignUp/>
+                <SignUp loadUser={this.props.loadUser} onSignInChange={this.props.onSignInChange}/>
                 
 
                  </div>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import SearchButton from '../layout/searchButton'
+import './searchPage.css'
 import SearchSideScroll from '../layout/searchSideScroll'
 import PetsList from '../project/petsList'
 import {Pets} from '../project/pets'
@@ -14,18 +14,18 @@ class searchPage extends Component {
 	render(){
 		return(
 
-			<div className="white">
+			<div className="white searchPage">
 
 			 	<div className="row">
 			 		<div className="col s12">
 			 			<OrderBySelect/>
 			 		</div>
-					<div className="col s12 m2">
+					<div className="col s12 m2 ">
 						
 						<SearchSideScroll /> 
 						
 				 	</div>
-					<div className="col s12 m8" >
+					<div className="col s12 m8 petlists" >
 
 						<PetsList pets={Pets}/>
 						

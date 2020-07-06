@@ -6,7 +6,7 @@ const Cards = (props) => {
 	return (
 
 		// <div className="row">
-		<div className="col s12 m3 testt">
+		<div className="col s12 m3 cardSize">
 
 			<div className="flip-card">
 

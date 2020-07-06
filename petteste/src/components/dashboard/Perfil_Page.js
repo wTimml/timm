@@ -1,6 +1,7 @@
 import React from 'react'
 import './Perfil_Page.css'
 import TabsPerfil from '../layout/tabsPerfil'
+import CadastrarPetModal from '../layout/modalCadPet'
 
 export default function PerfilPage({ name, doados, adotados, cadastrados })  {
 
@@ -10,7 +11,13 @@ export default function PerfilPage({ name, doados, adotados, cadastrados })  {
 
             <div className="Container">
                 <div className="header">
-                    <i className="fa fa-bars" aria-hidden="true"></i>
+                    <a className="dropdown-trigger2" href="#" data-target="dropdownPerfil"> <i className="material-icons" >dehaze</i>
+                        </a>
+                    <ul id='dropdownPerfil' className='dropdown-content'>
+                        <li><a href="#!">zz</a></li>
+                        <li><a href="#!">\\</a></li>
+
+                    </ul>
                 </div>
 
                 <div className="perfilMain">
@@ -20,6 +27,7 @@ export default function PerfilPage({ name, doados, adotados, cadastrados })  {
                                 <img className="photo" src="https://pbs.twimg.com/profile_images/378800000435627552/b5de73bd2853881438d261ad7994e0b3.jpeg" />
                                 <div className="perfilActive"></div>
                             </div>
+                            
                             <h4 className="perfilName" >{name}</h4>
                             {// <p className="info">UI/UX Designer</p>
                              //<p className="info">jane.doe@gmail.com</p>
@@ -50,6 +58,10 @@ export default function PerfilPage({ name, doados, adotados, cadastrados })  {
                             </div>*/}
                         </div>
                         <div className="perfilRight col s12 m8 ">
+                            <div className='perfilAddPetButton right'>
+                                <CadastrarPetModal />
+                            </div>
+
                            <TabsPerfil/>
                            
                         </div>
