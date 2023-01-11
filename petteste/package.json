@@ -15,7 +15,7 @@
     "express": "^4.17.1",
     "googleapis": "^39.2.0",
     "jquery": "^3.5.1",
-    "knex": "^0.21.1",
+    "knex": "^2.4.0",
     "materialize-css": "^1.0.0-rc.2",
     "pg": "^8.2.1",
     "pure-react-carousel": "^1.27.1",
